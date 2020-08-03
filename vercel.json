@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "scope": "jobspot-me",
+  "scope": "jonathangaldino",
   "alias": [
       "jobspot-me.vercel.app"
   ],
   "builds": [
+    {
+      "src": "/packages/client/build/**",
+      "use": "@vercel/static"
+    },
     {
       "src": "/packages/server/dist/app.js",
       "use": "@vercel/node"
@@ -12,8 +16,19 @@
   ],
   "routes": [
     {
-      "src": "/.*",
-      "dest": "/packages/server/dist/app.js"
+      "src": "/",
+      "dest": "/packages/client/build/index.html"
+    },
+    {
+      "src": "/(.*).(js.map|js|css|txt|png|svg)",
+      "dest": "/packages/client/build/$1.$2"
+    },
+    {
+      "src": "/graphql",
+      "dest": "/packages/server/dist/app.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ],
   "env": {

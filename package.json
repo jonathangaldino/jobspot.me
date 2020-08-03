@@ -13,6 +13,7 @@
     "server:dev": "yarn workspace @jobspot/server dev",
     "server:build": "yarn workspace @jobspot/server build",
     "client:dev": "yarn workspace @jobspot/client start",
+    "client:build": "yarn workspace @jobspot/client build",
     "relay": "yarn workspace @jobspot/client relay",
     "update-schema": "yarn workspace @jobspot/server update-schema"
   },
