@@ -18,14 +18,20 @@ const Header: React.FC = () => (
 export default Header;
 
 const Wrapper = styled.div`
-  /* margin-left: 25px; */
-  padding-right: 25px;
-  padding-left: 25px;
+  margin: 0 2vw;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Boxes = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  justify-content: space-evenly;
   padding: 25px 0px;
-  width: 50%;
+  width: 100%;
 `;

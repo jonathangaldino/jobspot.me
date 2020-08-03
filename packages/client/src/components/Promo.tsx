@@ -27,9 +27,11 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
+  }
 
-  height: 110px;
   background: rgb(241, 137, 44);
   background: linear-gradient(
     98deg,
@@ -38,19 +40,25 @@ const Wrapper = styled.div`
   );
 
   border-radius: 6px;
-  padding: 0px 20px;
 
   button {
-    width: 220px;
-    height: 50px;
+    width: 13.75rem;
+    height: 3.125rem;
     background: #ffffff;
     border-radius: 6px;
     border: 0;
     color: #333333;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
     outline: 0;
     transition: background 0.3s ease;
+    margin-right: 1.25rem;
+    @media (max-width: 800px) {
+      margin-bottom: 1.25rem;
+      margin-right: 0;
+
+      font-size: 1rem;
+    }
 
     &:hover {
       background: #eee8e8;
@@ -59,8 +67,8 @@ const Wrapper = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  height: 50px;
-  width: 50px;
+  height: 3.125rem;
+  width: 3.125rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -73,8 +81,8 @@ const IconWrapper = styled.div`
 
   svg {
     fill: #fff;
-    height: 24px;
-    width: 24px;
+    height: 100%;
+    width: 100%;
     align-self: center;
   }
 `;
@@ -83,25 +91,33 @@ const Informations = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 10px;
 `;
 
 const Texts = styled.div`
-  margin-left: 16px;
+  margin-left: 1rem;
   color: #fff;
-
+  padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 45px;
+  @media (max-width: 800px) {
+    margin-left: 20px;
+  }
 
   h3 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;
+    @media (max-width: 800px) {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+      margin: 0;
+    }
   }
 
   small {
     font-weight: 400px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 `;

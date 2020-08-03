@@ -22,46 +22,49 @@ export default Sidebar;
 
 const Wrapper = styled.aside`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 
   background: #ffffff;
   border: 1px solid #e4e4e4;
 
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 0.625rem;
+  padding-bottom: 1.25rem;
 
   width: 6rem;
   text-align: center;
+  @media (max-width: 800px) {
+    order: 1;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 const Topside = styled.div`
   img {
-    width: 50px;
+    width: 3.125rem;
   }
 
   p {
-    font-size: 18px;
-    font-color: #3333;
+    font-size: 1.125rem;
+    color: #3333;
     margin-top: 5px;
   }
 `;
 
 const Bottomside = styled.div`
-  /* align-self: flex-end; */
-
-  /* background: purple; */
   display: flex;
   flex-direction: column;
-  height: 60px;
+  height: 3.75rem;
   justify-content: space-around;
 
   svg {
     transition: fill 0.4s ease;
     fill: #d1d2d6;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   svg:hover {

@@ -27,15 +27,15 @@ export default CreateBox;
 const Wrapper = styled.button`
   display: flex;
   align-items: center;
-
+  justify-content: center;
   height: 100px;
   width: 290px;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
   background: #ffffff;
   border: 1px solid #e4e4e4;
   border-radius: 6px;
-
-  padding: 0px 25px;
-  margin-right: 25px;
   outline: 0;
 
   p {

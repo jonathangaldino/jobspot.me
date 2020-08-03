@@ -26,30 +26,40 @@ export default Box;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  justify-content: space-evenly;
   height: 100px;
   width: 290px;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+  padding: 0 10px;
   background: #ffffff;
   border: 1px solid #e4e4e4;
   border-radius: 6px;
 
-  padding: 0px 25px;
-  margin-right: 25px;
-
   p {
     font-weight: bold;
     font-size: 18px;
+    @media (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
 
   strong {
     font-size: 22px;
+    @media (max-width: 800px) {
+      font-size: 1.125rem;
+    }
   }
 `;
 
 const IconWrapper = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
+  @media (max-width: 800px) {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
 
   display: flex;
   align-items: center;
@@ -61,6 +71,10 @@ const IconWrapper = styled.div`
     fill: #fff;
     width: 24px;
     height: 24px;
+    @media (max-width: 800px) {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
   }
 
   border-radius: 50%;

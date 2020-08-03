@@ -21,7 +21,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -56,12 +55,12 @@ export default createGlobalStyle`
   body {
     background: #ffffff;
     line-height: 1;
-    font-size: 100%;
     font-family: Yu Gothic UI;
   }
 
   html, body, #root {
   height: 100%;
+  font-size: 16px;
 }
 
   button {
