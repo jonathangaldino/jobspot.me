@@ -18,7 +18,7 @@ const Header: React.FC = () => (
 export default Header;
 
 const Wrapper = styled.div`
-  margin: 0 2vw;
+  margin: 0 25px;
   justify-content: center;
   align-items: center;
 `;
